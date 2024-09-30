@@ -20,6 +20,26 @@ return {
           ['\\'] = 'close_window',
         },
       },
+      filtered_items = {
+        visible = true, -- If set this to `true`, all "hide" just mean "dimmed out"
+        show_hidden_count = true,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        hide_by_name = {
+          -- '.git',
+          -- '.DS_Store',
+          -- 'thumbs.db',
+        },
+        never_show = {},
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = true,
+        },
+      },
+      
     },
   },
+  -- config = function()
+  --   vim.keymap.set("n", "<C-d>", "<CMD>Neotree toggle<CR>", {})
+  -- end
 }
